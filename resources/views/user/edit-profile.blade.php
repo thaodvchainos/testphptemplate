@@ -37,7 +37,7 @@
 
                     <div class="form-group">
                         <label for="phone">{{tr('mobile')}}</label>
-                        <input type="text" name="mobile" value="{{Auth::user()->mobile}}" class="form-control" id="phone">
+                        <input type="text" required pattern="[0-9]{10}" class="form-control" name="mobile" value="{{Auth::user()->mobile}}" class="form-control" id="phone">
                     </div>
 
                     <div class="form-group">
