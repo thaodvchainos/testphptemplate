@@ -606,8 +606,9 @@
                             confirm('The video format is not supported in this browser. Please option some other browser.');
                         
                         });
-
-                        jQuery("#trailer-video-player").hide();
+                        //removve trailer 
+                        jQuery("#trailer-video-player").remove();
+                        //jQuery("#trailer-video-player").hide();
                         jQuery("#main-video-player").show();
                     
                     }
