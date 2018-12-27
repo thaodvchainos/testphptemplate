@@ -1,4 +1,4 @@
-<div class="row footer">
+<div class="row footer" style="position: fixed;bottom: 0;width: 100%;">
 <div class="container">
 
 <div class="pull-left">
