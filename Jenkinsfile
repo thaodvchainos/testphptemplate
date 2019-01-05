@@ -13,7 +13,11 @@ pipeline {
                 checkstyle pattern: 'build/logs/checkstyle.xml'
                 }
         }
-        
+        stage('composer_install') {
+            steps {
+                sh 'composer install'
+                }
+        }
         
         stage('Test'){
             steps {
