@@ -18,7 +18,7 @@ pipeline {
         stage('Test'){
             steps {
                 sh  'echo  "TEST STAGE"' 
-                sh 'vendor/bin/phpunit'
+                
                 
                 sh 'vendor/bin/codecept run'
             }
