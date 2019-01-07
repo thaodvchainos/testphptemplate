@@ -1,8 +1,14 @@
-<phpunit codecoverage="true" haltonfailure="true" haltonerror="true">
-  <formatter type="clover" usefile="false"/>
-  <batchtest>
-    <fileset dir="tests">
-      <include name="ExampleTest.php"/>
-    </fileset>
-  </batchtest>
+<phpunit
+	colors="true"
+	verbose="true"
+	bootstrap="test/setup.php"
+	convertNoticesToExceptions="true"
+	convertWarningsToExceptions="true"
+	convertErrorsToExceptions="true"
+	>
+		<listeners>
+      <listener class="\MyBuilder\PhpunitAccelerator\TestListener">
+      </listener>
+    </listeners>
 </phpunit>
+
