@@ -3,7 +3,7 @@
   <formatter type="clover" usefile="false"/>
   <batchtest>
     <fileset dir="tests">
-      <include name=".php"/>
+      <include name="ExampleTest.php"/>
     </fileset>
   </batchtest>
 </phpunit>
