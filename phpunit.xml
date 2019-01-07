@@ -1,14 +1,22 @@
-<phpunit
-	colors="true"
-	verbose="true"
-	bootstrap="test/setup.php"
-	convertNoticesToExceptions="true"
-	convertWarningsToExceptions="true"
-	convertErrorsToExceptions="true"
-	>
-		<listeners>
-      <listener class="\MyBuilder\PhpunitAccelerator\TestListener">
-      </listener>
-    </listeners>
-</phpunit>
+<target name="phpunit_run_by_directory">
+    <propertyregex property="junit.name"
+          input="${testDirectory}"
+          regexp="(\w+)\/(\w+)\/Tests$"
+          select="\1-\2.xml"
+          casesensitive="false"
+          override="true"  />
+    <exec dir="${basedir}/tests" executable="${basedir}/bin/phpunit" outputproperty="testOutput" resultproperty="exitCode">
+        <arg line="-c ${basedir}/app --log-junit build/logs/${junit.name} ${testDirectory}"/>
+    </exec>
 
+    <echo>TestSuite ${testDirectory} finished:</echo>
+    <echo>${testOutput}</echo>
+
+    <fail message="TestSuite '${testDirectory}' failed.">
+        <condition>
+            <not>
+                <equals arg1="${exitCode}" arg2="0"/>
+            </not>
+        </condition>
+    </fail>
+</target>
