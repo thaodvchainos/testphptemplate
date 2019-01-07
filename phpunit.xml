@@ -6,9 +6,15 @@
 	convertErrorsToExceptions="true"
 	>
 	<testsuites>
-        <testsuite name="ProjectName">
-          <directory suffix="ExampleTest.php">tests/</directory>
-         
-        </testsuite>
-    </testsuites>
+		<testsuite name="ProjectName">
+		  <directory suffix="Test.php">tests/</directory>
+
+		</testsuite>
+    	</testsuites>
+	<logging>
+	    <log type="coverage-html" target="build/coverage"/>
+	    <log type="coverage-clover" target="build/logs/clover.xml"/>
+	    <log type="coverage-crap4j" target="build/logs/crap4j.xml"/>
+	    <log type="junit" target="build/logs/junit.xml" logIncompleteSkipped="false"/>
+	</logging>
 </phpunit>
