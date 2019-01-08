@@ -6,12 +6,6 @@
 	convertErrorsToExceptions="true"
 	>
 	
-	<testsuites>
-		<testsuite name="ProjectName">
-		  <directory>tests/</directory>
-
-		</testsuite>
-    	</testsuites>
 	
 	<logging>
 	    <log type="coverage-html" target="build/coverage"/>
