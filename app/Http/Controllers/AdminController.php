@@ -88,9 +88,7 @@ class AdminController extends Controller
     }
 
     public function dashboard() {
-        conslll...
-
-            console.log("demo");
+        
         $admin = Admin::first();
 
         $admin->token = Helper::generate_token();
