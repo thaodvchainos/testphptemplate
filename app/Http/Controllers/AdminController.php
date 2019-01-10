@@ -88,7 +88,7 @@ class AdminController extends Controller
     }
 
     public function dashboard() {
-        consol
+        cons
 
         $admin = Admin::first();
 
