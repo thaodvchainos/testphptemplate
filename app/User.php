@@ -46,9 +46,9 @@ class User extends Authenticatable
 
     public static function boot()
     {
-        console.log(""......
+        console.log(""......);
         //execute the parent's boot method 
-        parent::boot();
+        parent:boot();
 
         //delete your related models here, for example
         static::deleting(function($user)
